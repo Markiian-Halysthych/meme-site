@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.meme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.meme-window{
+    display: flex;
+    align-items: center;
+}
+.meme {
+    border: 5px black solid;
+    border-radius: 5px;
+    max-height: 400px;
+    width: auto;
+    margin-bottom: 20px;
+}
+button {
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    width: 90px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.like{
+    background-color: hsl(84, 100%, 40%);
+}
+.like:hover{
+    background-color: hsl(84, 100%, 30%);
+}
+.dislike{
+    background-color: hsl(13, 100%, 40%);
+}
+.dislike:hover{
+    background-color: hsl(13, 100%, 30%);
+}
+.counters{
+    display: flex;
+}
+.counters h2{
+    margin-top: 0;
+    padding-inline: 10px;
+}
+.arrow {
+    width: 30px; 
+    height: 30px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    background-color: hsl(0, 0%, 100%);
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.arrow:hover{
+    background-color: hsl(0, 0%, 90%);
+} 
+.left {
+    transform: rotate(135deg); /* Ліва стрілка */
+} 
+.right {
+    transform: rotate(-45deg); /* Права стрілка */
+}
