@@ -4,7 +4,6 @@ import React from "react"
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import "./App.css"
 import Heh from "./Test"
-import Billy from "./assets/Billy.gif"
 
 function App() {
 

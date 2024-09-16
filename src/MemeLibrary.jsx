@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { loadMedia } from "./assets/gifs/importAll";
 import "./MemeLibrary.css";
 
 function MemeLibrary() {
-    // Завантаження мемів
-    const memes = loadMedia().map((media) => ({
+
+    const [memes, setMemes] = useState([])
+
+    const loadLikesFromStorage = () => {
+        const storedLikes = localStorage.getItem("memeLikes")
+        return storedLikes ? JSON.parse(storedLikes) : {}
+    }
+
+    useEffect(() => {
+       const likesFromStorage = loadLikesFromStorage();
+       const loadedMemes = loadMedia().map((media) => ({
         url: media.url,
         name: media.name,
-        likes: 0
-    }));
+        likes: likesFromStorage[media.name] || 0,
+       }))
+
+       setMemes(loadedMemes)
+    }, [])
 
     // Компонент картки мемів
     function MemeCard({ meme }) {
