@@ -3,7 +3,6 @@ import { loadMedia } from "./assets/gifs/importAll"; // Імпортуємо в�
 import DislikeSound from "./assets/FuckUAiChan.mp3";
 import LikeSound from "./assets/SocialCreditMusic.mp3";
 import "./MemeWindow.css";
-import NavBar from "./NavBar";
 
 function MemeWindow() {
     // Функція для завантаження лайків із Local Storage
@@ -91,7 +90,6 @@ function MemeWindow() {
 
     return (
         <div>
-            <NavBar/>
             <div className="meme-container">
                 <div className="meme-window">
                     <button className="arrow left" onClick={handleLeftArrow}></button>

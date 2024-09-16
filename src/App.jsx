@@ -1,5 +1,5 @@
 import MemeWindow from "./MemeWindow"
-import MemeStore from "./MemeLibrary"
+import MemeLibrary from "./MemeLibrary"
 import React from "react"
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import "./App.css"
@@ -19,7 +19,7 @@ function App() {
               <Link to="/">Meme Window</Link>
             </li>
             <li>
-              <Link to="Meme Store">Meme Library</Link>
+              <Link to="Meme Library">Meme Library</Link>
             </li>
           </ul>
         </nav>
@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MemeWindow />} />
 
-          <Route path="/Meme Store" element={<MemeStore />}/>
+          <Route path="/Meme Library" element={<MemeLibrary />}/>
         </Routes>
       </div>
     </Router>
