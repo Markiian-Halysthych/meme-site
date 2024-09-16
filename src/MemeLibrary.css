@@ -1,0 +1,28 @@
+.cards-container {
+    display: flex;
+    margin-left: 6%;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: calc(100vh);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.card {
+    display: flex;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    padding: 5px;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 10px; /* Відступи між картками */
+    max-width: 300px; /* Максимальна ширина картки */
+    width: calc(33% - 20px); /* Ширина картки (33% ширини контейнера мінус відступи) */
+}
+.card img {
+    border-radius: 10px;
+    max-width: 100%; /* Зображення не виходить за межі картки */
+    height: auto; /* Зберігає пропорції зображення */
+}
+
+
